@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //Bài 1: Swap Number - Đổi vị trí giá trị sô
+
+        //     let a = 5;
+        //     let b = 10;
+        //     let temp = a;
+        //     a = b;
+        //     b = temp;
+        //     console.log(a);
+        //     console.log(b);
+
+
+        // //Bài 2: Swap Array - Đổi vị trí phần tử trong mảng
+
+        //     let array = [ //-> a,b,c,d
+        //         a,
+        //         b,
+        //         c,
+        //         d,
+        //     ];
+            
+        //     let temp = array[0];
+        //     array[0] = array[2];
+        //     array[2] = temp;
+
+        //     console.log(array); //-> c,b,a,d
+
+
+        /////////////////Bài Review:
+
+        // //Bài 4: - Sử dụng vòng While(true){break;} để phù hợp với các điều kiện:
+
+        //     //Cách 1: MAX DÀIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII:
+
+        //         let chuCai = [
+        //             'C',
+        //             'R',
+        //             'U',
+        //             'D',
+        //         ];
+        //         let sanPham = [
+        //             'The current items are:',
+        //             '1. Jeans',
+        //             '2. T-Shirt',
+        //             '3. Socks',
+        //         ];
+
+        //         let nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //             nhap = String (nhap);
+
+        //         if (nhap === 'e') {
+        //             alert('This command is not supported');
+        //         }
+        //         else if (nhap === 'r'){
+        //             for (let i = 0; i < sanPham.length; i++){ //-> hiện cả mảng xuôi
+
+        //             console.log(...sanPham[i]);
+        //             alert(sanPham[i]);
+        //             }
+        //         }
+        //         else if (nhap ==='c'){
+        //             let newItem = prompt('Enter the new name of the new item: ');
+        //             newItem = String(newItem);
+
+        //             sanPham.push(newItem);
+
+        //             alert('Done');
+                    
+        //             nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //             nhap = String(nhap);
+
+        //             if (nhap === 'r'){
+        //                 for ( let i=0; i< sanPham.length; i++){
+
+        //                     console.log(...sanPham[i]);
+        //                     alert(sanPham[i]);
+        //                 }
+
+        //                 nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //                 nhap = String(nhap);
+
+        //                 if (nhap === 'u'){
+        //                     let positionUpdate = prompt('Enter position you want to update: ');
+        //                     positionUpdate = Number(positionUpdate);
+        //                     let newName = prompt('Enter new name: ');
+        //                     newName = String(newName);
+        //                     sanPham[positionUpdate] = newName;
+
+        //                     alert('Done');
+                            
+
+        //                     nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //                     nhap = String(nhap);
+
+        //                     if (nhap === 'r'){
+        //                         for (let i = 0; i< sanPham.length; i++){
+        //                             alert(sanPham[i]);
+        //                             console.log(...sanPham[i]);
+        //                         }
+
+        //                             nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //                             nhap = String(nhap);
+
+        //                             if (nhap === 'd'){
+        //                                 let positionDelete = prompt('Enter the position you want to delete: ');
+        //                                 positionDelete = Number(positionDelete);
+
+        //                                 sanPham.splice(positionDelete, 1);
+
+                                  
+        //                                 alert ('Done');
+
+        //                                 nhap = prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`);
+        //                                 nhap = String(nhap);
+
+        //                                 if (nhap === 'r'){
+        //                                     for (let i = 0; i < sanPham.length; i++){
+        //                                     console.log(...sanPham[i]);
+        //                                     alert(sanPham[i]);
+        //                                     }
+        //                                 }
+                                        
+        //                             }
+                                    
+
+        //                         }
+        //                     }
+                            
+        //                 }
+                        
+        //             }
+
+
+
+            // //Cách 2: DÙNG WHILE LOOPS RẤT NGẮNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN:
+
+            //     let chuCai = [
+            //             'C',
+            //             'R',
+            //             'U',
+            //             'D',
+            //         ];
+            //     let sanPham = [
+            //         ' Jeans',
+            //         ' T-Shirt',
+            //         ' Socks',
+            //     ];
+
+            //     let nhap;
+
+            //     while(true){                    
+            //         nhap = String(prompt(`Hi there, welcome to shop admin panel, what do you want (C,R,U,D) ?`));
+                    
+            //          if (nhap === 'r'){
+            //             console.log('The current items are:');
+            //             for (let i = 0; i < sanPham.length; i++){ //-> hiện cả mảng xuôi
+                            
+            //                 console.log(`${i+1}. ${sanPham[i]}`);
+            //                 alert(sanPham[i]);
+            //             }
+                        
+            //         }
+                
+            //         else if (nhap ==='c'){
+            //             let newItem = prompt('Enter the new name of the new item: ');
+            //             newItem = String(newItem);
+
+            //             sanPham.push(newItem);
+
+            //             alert('Done');
+
+            //         }
+
+            //         else if (nhap === 'u'){
+            //             let positionUpdate = prompt('Enter position you want to update: ');
+            //             positionUpdate = Number(positionUpdate);
+            //             let newName = prompt('Enter new name: ');
+            //             newName = String(newName);
+            //             sanPham[positionUpdate] = newName;
+
+            //             alert('Done');
+                        
+            //         }
+
+            //         else if (nhap === 'd'){
+            //             let positionDelete = prompt('Enter the position you want to delete: ');
+            //             positionDelete = Number(positionDelete);
+
+            //             sanPham.splice(positionDelete, 1);
+
+            //             alert ('Done');
+            //         }
+
+            //         else if (nhap === 'e') {
+            //             alert('This command is not supported');
+            //             break;
+                        
+            //         }
+
+            //     }
+
+        
+        // //Bài 5: Tính tổng các phần tử trong mảng - Dùng String vì nhập phần tử chứa dấu , - split() đổi String -> Array
+
+        //     let nhapCacSo = String(prompt('Enter a sequence of Number, separated by commas (,) '));
+
+        //     let nhapCacSo1  = nhapCacSo.split(','); //-> biến String thành Array
+        //     console.log(nhapCacSo1);
+
+        //     // //Cách 1:
+        //     // let reducer = (a, b) => Number(a) + Number(b);
+        //     // let tong = nhapCacSo1.reduce(reducer);
+
+        //     // alert(`The sum of them is ${tong}`);
+
+        //     //Cách 2:
+        //     let sum = 0;
+        //     for ( let i =0; i < nhapCacSo1.length; i++){
+        //         sum = Number(sum) + Number(nhapCacSo1[i]);
+
+        //     }
+
+        //     console.log(sum);
+        //     alert(sum);
+
+
+
+        // //Bài 6: Tìm giá trị nhỏ nhất trong mảng:
+
+        //     //Cách 1: Nhanh nhất:
+
+        //         let nhapCacSo = String(prompt('Enter a sequence of Number, separated by commas ","'));
+
+        //         let nhapCacSo1 = nhapCacSo.split(','); //-> String to Array
+        //         console.log(nhapCacSo1);
+
+        //         let min = nhapCacSo1[0];
+
+        //         for ( let i = 0; i < nhapCacSo1.length; i++){
+        //             if (min > nhapCacSo1[i]){
+        //                 min = nhapCacSo1[i];
+        //             }
+        //         }
+
+        //         console.log(min);
+
+            // //Cách 2 và nhiều cách khác: Chậm
+                
+            //     let min = Math.min.apply(Math, nhapCacSo1);
+                
+            //     console.log(min);
+
+
+
+        // //Bài 7: Tìm số trong mảng
+            
+        //     const arr =  [3, 4, 6, -9, 10, -88, 2];
+        //     console.log(arr);
+
+        //     let nhap = Number(prompt(' Enter a number: '));
+
+        //     if (arr.indexOf(nhap) < 0){
+        //         alert ('Khong tồn tại');
+        //     }
+        //     else if (arr.indexOf(nhap) >= 0) {
+        //         alert('Có tồn tại');
+        //     }
+
+
+        //Bài 8: Quản lý đàn cừu:
+            
+            console.log('Hello, my name is Phuong Nam and here is my sheep sizes: ');
+
+            let arr = [5, 7, 300, 90, 24, 50, 75];
+            console.log(arr);
+
+            //Tìm Max trong Array:
+            //Cách 1: Nhanh nhất
+            let max = arr[0];
+
+            for (let i = 0; i < arr.length; i++){
+                if( max < arr[i]){
+                    max = arr[i];
+                }
+            }
+            // //Cách 2 và nhiều cách khác: chậm
+            // var max = Math.max.apply(Math, arr); 
+            // max = Math.max(...arr);
+            // console.log(max);
+            console.log(`Now my biggest sheep has size ${max}, let\'s shave it: `);
+
+            
+            console.log('After shearing, here is my flock ')
+
+            let defaultSize = 8;
+            
+            arr.splice(arr.indexOf(max), 1, defaultSize);
+
+            console.log(arr);
+
+
+
+            //Làm với nhiều tháng
+            let months = Number(prompt('Làm trong bao nhiêu tháng: '));
+            
+            for (let i = 0 ; i < months; i++){
+
+                console.log(`MONTH ` + Number(i+1));
+                console.log ('One month has passed, my sheeps has grown, here are their sizes: ');
+
+            
+                for (let i = 0; i < arr.length; i++){
+                    arr[i] = arr[i] + 50;
+                }
+                console.log(arr);
+
+
+                max = arr[0];
+                for (let i = 0; i < arr.length; i++){
+                    if( max < arr[i]){
+                        max = arr[i];
+                    }
+                }
+                console.log(`Now my biggest sheep has size ${max}, let\'s shave it:`);
+
+
+                console.log('After shearing, here is my flock ')
+
+                arr.splice(arr.indexOf(max), 1, defaultSize);
+
+                console.log(arr);
+
+
+            }
+
+             //Tính tổng tiền trong mảng:
+             let reducer = (a, b) => Number(a) + Number(b);
+                let tongSizeFlock = arr.reduce(reducer);
+
+                console.log(`My flock has size in total: ${tongSizeFlock} `);
+
+                let money = tongSizeFlock * 23000;
+
+                console.log(`I would get ${tongSizeFlock} * 2$ = ${money}`);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Bài 1:
+            //1. var and const in Javascript are 2 ways to declarea a variable in Javascript
+            //2. The differences between let and var are:
+                //var declarations are globally scoped or function scoped while let are block scoped
+                //var variables can be updated and re-declared within its scope
+                //let variables can be updated but not re-declared
+                //var variables are initialized with undefined
+                //let variables are not initialized
+            //3. The differences between let and const are:
+                //let variables can be updated but not re-declared
+                //const variables can neither be updated nor re-declared
+                //let can be declared without being initialized
+                //const must be initialized during declaration
+            //4. What to use in what cases ?
+                //Const is used to declare a constant - a value that cannot be changed during runtime
+                //Let creates an accessible variable in the block that surrounds it 
+                //Var creates an accessible variable throughout its containment function
+        
+        //Bài 2:
+            //1. What is boolean?
+                //The boolean type has only two values: true and false.
+            //2. What results in Boolean?
+                //They are  yes/no values: true means “yes, correct”, and false means “no, incorrect”.
+        
+        //Bài 3:
+            //a.
+            for (let i = 0; i < 7; i++){
+                console.log(i);
+                alert(i);
+            }
+
+            //b.
+            let n = prompt('Enter a number? ');
+            n = Number(n);
+            for (let i = 0; i < n; i++){
+                console.log(i);
+                alert(i);
+            }
+
+            //c.
+            let n = prompt('Enter n');
+            n = Number(n);
+            for (let i = 3; i < n; i++){
+                console.log(i);
+                alert(i);
+            }
+
+            //d.
+            let c = prompt('Enter c');
+            c = Number(c);
+            let n = prompt('Enter n');
+            n = Number(n);
+
+            for (let i = c; i < n; i++){
+                console.log(i);
+                alert(i);
+            }
+
+            //e.
+            let c = prompt('Enter c');
+            c = Number(c);
+            let n = prompt('Enter n');
+            n = Number(n);
+
+            for ( let i = c; i < n; i = i + 3 ){
+                alert(i);
+                console.log(i);
+            }
+
+            //f.
+            let c = prompt('Enter c');
+            c = Number(c);
+            let n = prompt('Enter n');
+            n = Number(n);
+            let s = prompt('Enter s');
+            s = Number(s);
+
+            for ( let i = c; i < n; i = i + s){
+                alert (i);
+            }
+
+
+        //Bài 4:
+            let n = prompt('Enter a number');
+            n = Number(n);
+            let fact = 1;
+            
+            for ( let i = 1; i <= n; i++ ){
+                fact = fact * i;
+               
+            }
+            console.log(fact);
+            alert(`The factorial of ${n} is ${fact}`);
+
+        //Bài 5:
+            let tuoi = prompt('How old are you?');
+            tuoi = Number(tuoi);
+            if( tuoi < 14 ){
+                alert('You are not old enough to view this content');
+            }
+            else {
+                alert('Enjoy!');
+            }
+
+        //Bài 6:
+            let x = prompt('Enter a number');
+            x = Number(x);
+
+            let arr = [];
+            arr [0] = 1;
+            arr [9] = 10;
+           
+            if(x > arr.length/2 ){
+                alert('Higher half of 0 - 9')
+            }
+            else if(x === arr.length/2){
+                alert('Half of 0 - 9')
+            }
+            else{
+                alert('Lower half of 0 - 9')
+            }
+
+        //Bài 7:
+            let n = prompt('n = ');
+            n = Number(n);
+            let x = prompt('x = ');
+            x = Number(x);
+
+            if( x > n/2){
+                alert(`${x} is higher half of ${n}`);
+            }
+            else if ( x === n/2){
+                alert(`${x} is half of ${n}`);
+            }
+            else{
+                alert(`${x} is lower half of ${n}`);
+            }
+        
+        //Bài 8:
+            let x = prompt('x = ');
+            x = Number(x);
+
+            if (x % 2 == 0){
+                alert(`${x} is an even number`);
+            }
+            else{
+                alert(`${x} is an odd number`);
+            }
+
+        //Bài 9:
+            //a. Tổng là 6, nửa là L, nửa là H:
+
+            for (let i = 0; i < 6/2; i++){
+                console.log('L');
+            }
+            for (let i = 0; i < 6/2; i++){
+                console.log('H');
+            }
+            
+            //b. Nhập n, nửa lớn là L, nửa nhỏ là H:
+            let n = prompt('Nhập n = ');
+            n = Number(n);
+
+            if ( n % 2 === 0 ){
+                for(let i = 0; i < n/2; i++){
+                    console.log('L');
+                }
+                for (let i = 0; i < n/2; i++){
+                    console.log('H');
+                }
+            }else{
+                for (let i =0; i < Math.round(n/2); i++){
+                    console.log('L');
+                }
+                for(let i = 0; i < Math.round(n/2)-1; i++){
+                    console.log('H');
+                }
+            }
+                
+            //c. 8 là 1 và 0 lặp lại:
+                for( let i = 0; i < 8; i++){
+                    if ( i % 2 === 0 ){
+                        console.log(0);
+                    }
+                    else {
+                        console.log(1);
+                    }
+                }
+
+            //d. Nhập n, 1 và 0 lặp lại:
+            let n = prompt('Enter the total number of 1\'s and 0\'s?' );
+            n = Number(n);
+
+            for(let i = 0; i < n; i++){
+                if ( i % 2 === 0){
+                    console.log(0);
+                }
+                else{
+                    console.log(1);
+                }
+            }
+
+        
+        //Bài 10:
+            //Calculate BMI:
+            let weightInKg = prompt('Your weight in kg?');
+            weightInKg = Number(weightInKg);
+            let heightInCm = prompt('Your height in cm');
+            heightInCm = Number(heightInCm);
+            
+            let heightInM = heightInCm/100;
+
+            let BMI = Math.round((weightInKg / (heightInM * heightInM)) *100)/100;
+            
+            alert(`Your BMI is ${BMI}`);
+
+            if ( BMI < 16 ){
+                alert('Severely underweight');
+            }
+            else if ( BMI >= 16 && BMI < 18.5 ){
+                alert('Underweight');
+            }
+            else if (BMI >= 18.5 && BMI < 25 ){
+                alert('Normal');
+            }
+            else if (BMI >= 25 && BMI <= 30){
+                alert('Overweight');
+            }
+            else {
+                alert('Obese');
+            }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

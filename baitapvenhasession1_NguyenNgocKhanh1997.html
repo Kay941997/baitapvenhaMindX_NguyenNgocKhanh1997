@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+    <script>
+        //1. Read about variables and data types:
+            //1. 3 different examples of invalid variable names:
+                //a. let break;
+                //b. let year-of-birth;
+                //c. let 4ever;
+            //2. How to check a variable data type:
+                //Use the typeof Operator to get the type of an object or variable  in Javascript
+                //Example: 
+                    //let x = 10;
+                    //console.log(typeof x);
+        
+        //2. Watch video about HTML, CSS, Javascript then connect two columns:
+            //1. Front-end - b. Consists of HTML, CSS, Javascript;
+            //2. HTML - a. Content
+            //3. CSS - e. Decoration, appearance
+            //4. JS - c. Direct User interaction
+
+        //3. 
+            //a.
+                let message = `Coding is great`;
+                message = String(message);
+                console.log(message);
+            //b.
+                let studentCount = 0;
+                studentCount = Number(studentCount);
+                console.log(studentCount);
+
+        //4.
+            //a.
+                message = `Coding might not be easy, but still great`;
+                console.log(message);
+            //b.
+                studentCount = 16;
+                console.log(studentCount);
+            //c.
+                message = message.toLowerCase();
+                console.log(message);
+            //d.
+                studentCount = studentCount + 1;
+                console.log(studentCount);
+
+        //5.
+            let bai_5 = (`You look beautiful today`);
+            bai_5 = String(bai_5);
+            console.log(bai_5);
+            alert (bai_5);
+                
+        //6.
+            let bai6 = prompt (`Hi there, your name please? `);
+            bai6 = String(bai6);
+            console.log(bai6);
+            alert(`Hello ${bai6} mathafaka`);
+            alert(`Nice to meet you`);
+
+        //7.
+            let firstName = prompt (`Enter your first name: `);
+            firstName = String(firstName);
+            console.log(firstName);
+            let lastName = prompt (`Enter your last name`);
+            lastName = String(lastName);
+            console.log(lastName);
+            alert(`Xin chào ${lastName} ${firstName}`);
+
+        //8.
+            let lengthOfSquare = prompt(`Enter side length of the square: `);
+            lengthOfSquare = Number(lengthOfSquare);
+            console.log(lengthOfSquare);
+
+            let areaOfSquare = lengthOfSquare * lengthOfSquare;
+            console.log(areaOfSquare);
+            alert(`The square area is ${areaOfSquare}`);
+
+        //9.
+            let radiusOfCircle = prompt (` Enter the radius of the circle: `);
+            radiusOfCircle = Number(radiusOfCircle);
+            console.log(radiusOfCircle);
+            
+            let areaOfCircle = 3.1416 * ((radiusOfCircle)**2);
+            console.log(areaOfCircle);
+
+            alert(`The circle area is ${areaOfCircle} `);
+
+        //10.
+            let doC = prompt (`Enter the temperature in Celcius: `);
+            doC = Number(doC);
+            console.log(doC);
+
+            let doF = doC * 1.8 + 32;
+            console.log(doF);
+
+            alert(`${doC} (C) = ${doF} (F)`);
+
+    </script>
+
+</html>
