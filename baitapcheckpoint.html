@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // //Bài Init(after 7):
+        // let movie = {
+        //     title: 'The dark knight rises',
+        //     year: 2012,
+        //     rate: 8.4,
+        //     nhap: 123,
+        // };
+        // console.log(movie);
+
+        // //Bài Read(after 9):
+        // console.log(movie.title);
+        // console.log(movie['title']);
+        // console.log(movie.year);
+        // console.log(movie['year']);
+        // console.log(movie.rate);
+        // console.log(movie['rate']);
+
+        // let nhap = prompt('What do you want to know');
+        // if ( nhap == null || nhap == undefined){
+        //     console.log(`${nhap} does not exist in our data`);
+        // }
+        // else{
+        //     console.log(movie[nhap]);
+        // }
+
+
+        // //Bài Update (after 10):
+        // movie.rate = 8.7;
+        // movie.rate = movie.rate + 0.5;
+
+        // console.log(movie)
+
+        // let nhapKey = prompt('What you want to update? ');
+        // let nhapValue = prompt('What is the update? ');
+        // movie[nhapKey] = nhapValue;
+
+
+        // console.log(movie);
+
+
+
+
+        ////Bài Create (after 11):
+    
+        let movie = {
+            title: 'The dark knight rises',
+            year: 2012,
+            rate: 8.4,
+        };
+        console.log(movie);
+
+        var nhapKey = prompt('What you want to update? ');
+
+
+        // ///////////////////////////Dùng if thế này sẽ dễ bị lỗi:////////////////////////////////
+        // if (  nhapKey !== null && nhapKey !== undefined  && nhapKey !== movie[nhapKey]){
+        //     console.log(`${nhapKey} does not exist in our data`);
+        //     let nhapNewData = prompt('Enter the new data: ');
+        //     //Cách 1:
+        //     let nhapNewDataNumber = Number(nhapNewData);
+        //     let nhapNewDataString = String(nhapNewData);
+
+        //     if ( nhapNewDataNumber ){
+        //         movie[nhapKey] = Number(nhapNewData);
+        //     }
+        //     else if ( nhapNewDataString ){
+        //         movie[nhapKey] = String(nhapNewData);
+        //     }
+        //     // //Cách 2:
+        //     // if (isNaN(nhapNewData)){
+        //     //     movie[nhapKey] = String(nhapNewData);
+        //     // }
+        //     // else{
+        //     //     movie[nhapKey] = Number(nhapNewData);
+        //     // }
+        //     console.log(movie);
+        // }
+        // else if (movie[nhapKey] === movie[nhapKey]){
+        //     let nhapNewDataUpdate = prompt('Enter data update: ');
+        //     let nhapNewDataUpdateNumber = Number(nhapNewDataUpdate);
+        //     let nhapNewDataUpdateString  = String(nhapNewDataUpdate);
+        //     if (nhapNewDataUpdateNumber){
+        //         movie[nhapKey] = Number(nhapNewDataUpdate);
+        //     }
+        //     else if (nhapNewDataUpdateString){
+        //         movie[nhapKey] = String(nhapNewDataUpdateString);
+        //     }
+        //     console.log(movie);
+        // }
+        // else{
+        //     console.log('Chuwa nhap gi ca');
+        // }
+
+
+        /////////////////////////////////////Cách làm đúng:////////////////////////////////////////////
+        if (movie[nhapKey]){
+            let nhapNewDataUpdate = prompt('Enter data update: ');
+            let nhapNewDataUpdateNumber = Number(nhapNewDataUpdate);
+            let nhapNewDataUpdateString  = String(nhapNewDataUpdate);
+            if (nhapNewDataUpdateNumber){
+                movie[nhapKey] = Number(nhapNewDataUpdate);
+            }
+            else if (nhapNewDataUpdateString){
+                movie[nhapKey] = String(nhapNewDataUpdateString);
+            }
+            console.log(movie);
+        }
+        else if (nhapKey === null || nhapKey === undefined || nhapKey === ""){
+            console.log('Chua nhap gi ca')
+            console.log(movie)
+        }
+        else{
+            console.log(`${nhapKey} does not exist in our data`);
+            let nhapNewData = prompt('Enter the new data: ');
+            //Cách 1:
+            let nhapNewDataNumber = Number(nhapNewData);
+            let nhapNewDataString = String(nhapNewData);
+
+            if ( nhapNewDataNumber ){
+                movie[nhapKey] = Number(nhapNewData);
+            }
+            else if ( nhapNewDataString ){
+                movie[nhapKey] = String(nhapNewData);
+            }
+            // //Cách 2:
+            // if (isNaN(nhapNewData)){
+            //     movie[nhapKey] = String(nhapNewData);
+            // }
+            // else{
+            //     movie[nhapKey] = Number(nhapNewData);
+            // }
+            console.log(movie);
+        }
+
+    
+
+
+
+
+
+
+        // //Bài Array of Objects (after 4):
+        // //a. Create Movie List:
+        // let movies = [];
+
+        // let movie1 = {
+        //     title: "Superman",
+        //     year: 2021,
+        //     rate: 10,
+        // };
+
+        // let movie2 = {
+        //     title: "Batman",
+        //     year: 2019,
+        //     rate: 9,
+        // };
+
+        // let movie3 = {
+        //     title: "Aquaman",
+        //     year: 2017,
+        //     rate: 8,
+        // };
+
+        // movies.push(movie1);
+        // movies.push(movie2);
+        // movies.push(movie3);
+
+        // console.log(movies);
+
+        // //Print first movie:
+        // console.log(movies[0]);
+        // console.log(movies[1]);
+        // console.log(movies[2]);
+
+        // //Print last movie with title:
+        // let lastMovie = movies[movies.length - 1];
+
+        // console.log(lastMovie);
+
+        // console.log(lastMovie.title);
+
+        // //Use a loop to print all movie in movie list:
+        // for (let i = 0; i < movies.length; i++){
+        //     console.log(movies[i]);
+        // }
+
+        // //Use a loop to print all movie in movie list, the date is prettified:
+        // for (let i = 0; i < movies.length; i++){
+        //     console.log(movies[i].title);
+        //     console.log(`Year: ${movies[i].year}`);
+        //     console.log(`Rate: ${movies[i].rate}`);
+        //     console.log('------------');
+        // }
+
+        
+        // //Increase the rate of the last movie by 0.7:
+        // lastMovie.rate = lastMovie.rate + 0.7;
+        // console.log(lastMovie.rate);
+
+        // //Hiển thị tất cả các phim sao cho phim cuối cùng có giá trị rate tăng lên 0.7:
+        // for (let i = 0; i < movies.length; i++){
+        //      if ( movies[i] === movies[movies.length - 1]){
+        //         console.log(movies[i].title);
+        //         console.log(`Year: ${movies[i].year}`);
+        //         console.log(`Rate: ${movies[i].rate + 0.7}`);
+        //         console.log('------------');
+        //     }
+
+        //     else {
+        //         console.log(movies[i].title);
+        //         console.log(`Year: ${movies[i].year}`);
+        //         console.log(`Rate: ${movies[i].rate}`);
+        //         console.log('------------');
+        //     }
+        // }
+
+
+        // //Bài Object containing array:
+        // //a. Tạo object:
+        // let movieAttackOnTitans = {
+        //     title: "Attack on titans",
+        //     year: 2013,
+        //     rate: 8.8,
+        //     casts: ['Eren', 'Armin', 'Mikasa']
+        // }
+
+        // //b. Hiện object:
+       
+        // for (let i = 0; i < 1; i++){             //!-> FOR LOOP HIỆN 1 OBJECT
+        //     console.log(movieAttackOnTitans.title);
+        //     console.log(`Year: ${movieAttackOnTitans.year}`);
+        //     console.log(`Rate: ${movieAttackOnTitans.rate}`);
+        //     console.log(`Casts: ${movieAttackOnTitans.casts.join(' ')}`);
+        // };
+
+        // //c. Add new cast:
+
+        // movieAttackOnTitans.casts.push('Levi');
+        // for (let i = 0; i < 1; i++){             //!-> FOR LOOP HIỆN 1 OBJECT
+        //     console.log(movieAttackOnTitans.title);
+        //     console.log(`Year: ${movieAttackOnTitans.year}`);
+        //     console.log(`Rate: ${movieAttackOnTitans.rate}`);
+        //     console.log(`Casts: ${movieAttackOnTitans.casts.join(' ')}`);
+        // };
+
+
+
+   
+
+
+        
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+
+             
+
+
+
+      
+
+
+    </script>
+</body>
+</html>
