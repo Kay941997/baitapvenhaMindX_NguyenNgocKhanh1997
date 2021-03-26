@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Bài 1: -->
+    <table>
+        <tr>
+            <td><button id="buttonUp"> + </button></td>
+            <td><p id="number"> 0 </p></td>
+            <td><button id="buttonDown"> - </button></td>
+        </tr>
+    </table>
+
+
+    <!-- Bài 2: -->
+    <table>
+        <tr>
+            <td><input id="inputSeconds" type="text" placeholder="Seconds"></td>
+            <td><button id="buttonStart"> Start </button></td>
+            <td><button id="buttonStop"> Stop </button></td>
+        </tr>
+        <tr>
+            <td><p id="number"> 0 </p></td> 
+        </tr>
+    </table>
+
+
+    <!-- Bài 3: -->
+    <p id="buttonReload"> Reload </button>
+    <h1 id="text"></h1>
+    <p id="author"></p>
+
+
+
+    <!-- Bài 4: -->
+    <style>
+        table{
+             border-collapse: collapse;
+        }
+
+        table, thead, tbody, tr, td {
+            padding: 10px;
+        }
+
+       
+    </style>
+
+    <input type="text" placeholder="Enter project" id="textProject">
+    <input type="text" placeholder="Enter task" id="textTask">
+    <input type="text" placeholder="Time spent" id="textTime">
+    <button id="buttonAdd"> Add </button>
+    <button id="buttonClear"> Clear </button>
+    <br>
+    <br>
+    <table id="table" border="1" >
+        <thead >
+            <tr>
+                <td> <b>Project</b>  </td>
+                <td> <b>Task</b>  </td>
+                <td> <b>Time Spent</b>  </td>
+                <td colspan="2"> <b>Actions</b> </td>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+            <tr class="items">
+                <td class="itemsProject"> Learn front-end </td>
+                <td class="itemsTask"> Learn HTML </td>
+                <td class="itemsTimeSpent"> 6</td>
+                <td> <button class="buttonsDelete"> x </button> </td>
+                <td> <button class="buttonsUpdate"> u </button> </td>
+            </tr>
+            <tr class="items">
+                <td class="itemsProject"> Learn front-end </td>
+                <td class="itemsTask"> Learn CSS </td>
+                <td class="itemsTimeSpent"> 8 </td>
+                <td> <button class="buttonsDelete"> x </button> </td>
+                <td> <button class="buttonsUpdate"> u </button> </td>
+            </tr>
+            <tr class="items">
+                <td class="itemsProject"> Learn front-end </td>
+                <td class="itemsTask"> Learn JS Variables and Data Types</td>
+                <td class="itemsTimeSpent"> 6 </td>
+                <td> <button class="buttonsDelete"> x </button> </td>
+                <td> <button class="buttonsUpdate"> u </button> </td>
+            </tr>
+            <tr class="items">
+                <td class="itemsProject"> Learn git </td>
+                <td class="itemsTask"> Learn git basics </td>
+                <td class="itemsTimeSpent"> 2 </td>
+                <td> <button class="buttonsDelete"> x </button> </td>
+                <td> <button class="buttonsUpdate"> u </button> </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+   
+
+
+
+
+    
+</body>
+
+<script src="./main.js">
+
+</script>
+
+</html>
